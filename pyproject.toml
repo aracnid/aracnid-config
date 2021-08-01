@@ -3,20 +3,18 @@ requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
-module = "i_mongodb"
+module = "aracnid_config"
 author = "Jason Romano"
 author-email = "aracnid@gmail.com"
-home-page = "https://github.com/aracnid/i-mongodb"
+home-page = "https://github.com/aracnid/aracnid-config"
 classifiers = ["License :: OSI Approved :: MIT License"]
 description-file = "README.md"
 requires-python = ">=3.9"
 requires = [
     "aracnid-logger",
-    "dnspython ~=1.16",
-    "pymongo[srv]",
-    "python-dateutil",
+    "i-mongodb",
 ]
-keywords = "python,mongodb"
+keywords = "python,mongodb,config"
 
 [tools.flit.metadata.requires-extra]
 test = ["pytest"]

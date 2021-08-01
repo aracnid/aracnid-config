@@ -4,7 +4,7 @@ import os
 
 from aracnid_logger import Logger
 
-from i_mongodb.i_mongodb import MongoDBInterface
+from i_mongodb import MongoDBInterface
 
 # initialize logging
 logger = Logger(__name__).get_logger()

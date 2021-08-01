@@ -6,7 +6,7 @@ import os
 from datetime import datetime, timezone
 import pytest
 
-import i_mongodb as imdb
+import aracnid_config as cfg
 
 # initialize module variables
 TEST_PROPS_NAME = '_test_props'
@@ -17,7 +17,7 @@ UTC = timezone.utc
 def fixture_config_obj():
     """Pytest fixture to initialize and return a Config object
     """
-    return imdb.Config()
+    return cfg.Config()
 
 @pytest.fixture(name='config_props')
 def fixture_config_props(config_obj):

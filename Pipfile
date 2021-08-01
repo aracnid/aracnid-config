@@ -14,9 +14,7 @@ pytest = "*"
 
 [packages]
 aracnid-logger = "*"
-dnspython = "~=1.16"
-pymongo = {extras = ["srv"], version = "*"}
-python-dateutil = "*"
+i-mongodb = "*"
 
 [requires]
 python_version = "3.9"

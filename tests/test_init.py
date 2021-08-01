@@ -1,8 +1,8 @@
 """Test functions for i-MongoDB import.
 """
-import i_mongodb
+import aracnid_config
 
 def test_version():
     """Tests that i-MongoDB was imported successfully.
     """
-    assert i_mongodb.__version__
+    assert aracnid_config.__version__

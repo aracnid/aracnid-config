@@ -1,6 +1,6 @@
-# i-MongoDB
+# Aracnid Config
 
-This is a standardized and customized connector to MongoDB.
+This is a custom configuration class that uses MongoDB as the backeng database.
 
 ## Getting Started
 
@@ -17,7 +17,7 @@ This package supports the following version of Python:
 Install the latest package using pip. (We prefer pipenv.)
 
 ```
-$ pip install i-mongodb
+$ pip install aracnid-config
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
@@ -38,7 +38,7 @@ TODO
 
 - **Jason Romano** - [Aracnid](https://github.com/aracnid)
 
-See also the list of [contributors](https://github.com/aracnid/i-mongodb/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/aracnid/aracnid-config/contributors) who participated in this project.
 
 ## License
 
