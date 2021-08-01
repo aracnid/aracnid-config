@@ -43,6 +43,17 @@ def test_init_config_collection(config_obj):
     assert config_obj._collection
     assert config_obj._collection.name == config_collection
 
+def test_init_config_by_name():
+    """Tests Config initialization, passing config set name.
+    """
+    config_collection = os.environ.get('CONFIG_COLLECTION')
+    config_obj = cfg.Config(TEST_PROPS_NAME)
+
+    assert config_obj
+    assert config_obj._collection
+    assert config_obj._collection.name == config_collection
+    assert config_obj.name == TEST_PROPS_NAME
+
 def test_load_properties(config_props):
     """Tests loading config properties.
     """
