@@ -10,7 +10,7 @@ from i_mongodb import MongoDBInterface
 logger = Logger(__name__).get_logger()
 
 
-class Config(MongoDBInterface):
+class Config:
     """The Config class is the configuration data store.
 
     Environment Variables:
@@ -29,9 +29,7 @@ class Config(MongoDBInterface):
         'mongo_client',
     ]
 
-    def __init__(self, name=None):
-        super().__init__()
-
+    def __init__(self, name=None, mdb=None):
         # read environment variables
         self._collection_name = os.environ.get('CONFIG_COLLECTION')
 
@@ -39,8 +37,11 @@ class Config(MongoDBInterface):
         self._props = {}
         self.auto_update = True
 
-        # setup database collection
-        self._collection = self.mdb[self._collection_name]
+        # initialize mongodb
+        self.mdb = mdb
+        if not mdb:
+            self.mdb = MongoDBInterface()
+        self._collection = self.mdb.read_collection(self._collection_name)
 
         # load the configuration set
         self.load_properties(name)
