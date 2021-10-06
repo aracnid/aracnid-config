@@ -6,7 +6,8 @@ import os
 from datetime import datetime, timezone
 import pytest
 
-import aracnid_config as cfg
+from aracnid_config import Config
+import aracnid_config
 
 # initialize module variables
 TEST_PROPS_NAME = '_test_props'
@@ -17,7 +18,7 @@ UTC = timezone.utc
 def fixture_config_obj():
     """Pytest fixture to initialize and return a Config object
     """
-    return cfg.Config()
+    return Config()
 
 @pytest.fixture(name='config_props')
 def fixture_config_props(config_obj):
@@ -29,10 +30,8 @@ def fixture_config_props(config_obj):
 def test_init_config_db(config_obj):
     """Tests Config initialization.
     """
-    config_db = config_obj.mdb
-
-    assert config_db
-    assert config_db.name == os.environ.get('MONGODB_DBNAME')
+    assert type(config_obj) is aracnid_config.config.Config
+    assert config_obj._collection_name == os.environ.get('CONFIG_COLLECTION')
 
 def test_init_config_collection(config_obj):
     """Tests Config collection initialization.
@@ -47,7 +46,7 @@ def test_init_config_by_name():
     """Tests Config initialization, passing config set name.
     """
     config_collection = os.environ.get('CONFIG_COLLECTION')
-    config_obj = cfg.Config(TEST_PROPS_NAME)
+    config_obj = Config(TEST_PROPS_NAME)
 
     assert config_obj
     assert config_obj._collection
