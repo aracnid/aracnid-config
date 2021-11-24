@@ -150,10 +150,13 @@ class Config:
 
     def delete(self):
         """Deletes the entire configuration set.
+
+        Does not delete the name of the configuration set. This object can
+        still be used to rebuild the configuration set after a deletion.
         """
         if self._name:
             self._collection.delete_one({'_id': self._name})
-            self._name = None
+            # self._name = None
             self._props = {}
 
 

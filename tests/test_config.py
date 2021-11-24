@@ -154,3 +154,4 @@ def test_delete_properties(config_props):
     count_after_deleted = config_collection.count_documents({})
 
     assert count_previous == count_after_deleted + 1
+    assert config_props.name == TEST_PROPS_NAME
