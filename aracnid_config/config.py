@@ -36,12 +36,13 @@ class Config:
         # initialize variables
         self._props = {}
         self.auto_update = True
+        mongodb = MongoDBInterface()
 
         # initialize mongodb
         self.mdb = mdb
         if not mdb:
-            self.mdb = MongoDBInterface()
-        self._collection = self.mdb.read_collection(self._collection_name)
+            self.mdb = mongodb.get_mdb()
+        self._collection = mongodb.read_collection(self._collection_name)
 
         # load the configuration set
         self.load_properties(name)

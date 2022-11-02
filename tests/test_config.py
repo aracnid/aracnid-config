@@ -30,7 +30,7 @@ def fixture_config_props(config_obj):
 def test_init_config_db(config_obj):
     """Tests Config initialization.
     """
-    assert type(config_obj) is aracnid_config.config.Config
+    assert isinstance(config_obj, aracnid_config.config.Config)
     assert config_obj._collection_name == os.environ.get('CONFIG_COLLECTION')
 
 def test_init_config_collection(config_obj):
@@ -39,7 +39,7 @@ def test_init_config_collection(config_obj):
     config_collection = os.environ.get('CONFIG_COLLECTION')
     assert config_obj._collection_name == config_collection
 
-    assert config_obj._collection
+    assert config_obj._collection is not None
     assert config_obj._collection.name == config_collection
 
 def test_init_config_by_name():
@@ -49,7 +49,7 @@ def test_init_config_by_name():
     config_obj = Config(TEST_PROPS_NAME)
 
     assert config_obj
-    assert config_obj._collection
+    assert config_obj._collection is not None
     assert config_obj._collection.name == config_collection
     assert config_obj.name == TEST_PROPS_NAME
 
