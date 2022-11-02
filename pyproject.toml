@@ -1,21 +1,28 @@
+[tool.poetry]
+name = "aracnid-config"
+version = "1.0.0-alpha.3"
+description = "Custom configuration class that uses MongoDB as the backend database"
+authors = ["Jason Romano <aracnid@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/aracnid/aracnid-config"
+keywords = ["python", "mongodb", "config"]
+packages = [{include = "aracnid_config"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aracnid-logger = "^1.0"
+i-mongodb = "^1.0"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.15"
+pytest = "^7.2"
+
 [build-system]
-requires = ["flit_core >=2,<4"]
-build-backend = "flit_core.buildapi"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
-[tool.flit.metadata]
-module = "aracnid_config"
-author = "Jason Romano"
-author-email = "aracnid@gmail.com"
-home-page = "https://github.com/aracnid/aracnid-config"
-classifiers = ["License :: OSI Approved :: MIT License"]
-description-file = "README.md"
-requires-python = ">=3.9"
-requires = [
-    "aracnid-logger",
-    "i-mongodb",
-]
-keywords = "python,mongodb,config"
-
-[tools.flit.metadata.requires-extra]
-test = ["pytest"]
-build = ["flit"]
+[tool.pytest.ini_options]
+addopts = "-p no:warnings"
+log_cli = true
+log_cli_level = "DEBUG"
