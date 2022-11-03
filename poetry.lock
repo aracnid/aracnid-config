@@ -82,7 +82,7 @@ test = ["pytest (>=6)"]
 
 [[package]]
 name = "i-mongodb"
-version = "1.0.1"
+version = "2.0.1"
 description = "Customized connector to MongoDB"
 category = "main"
 optional = false
@@ -315,7 +315,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "3a79d4ec00187a581fbe31d3708899b0708ddd65e269ae820fd6d998b3d8904d"
+content-hash = "0de28be773f888ef4754e34d6e1efacd8f199ecd4a8654d8135f1412b32031ea"
 
 [metadata.files]
 aracnid-logger = [
@@ -347,8 +347,8 @@ exceptiongroup = [
     {file = "exceptiongroup-1.0.0.tar.gz", hash = "sha256:affbabf13fb6e98988c38d9c5650e701569fe3c1de3233cfb61c5f33774690ad"},
 ]
 i-mongodb = [
-    {file = "i_mongodb-1.0.1-py3-none-any.whl", hash = "sha256:3d45e06a55f9993ee09a245f5045c112c83fa36dcb11b65960d406e7d7143b49"},
-    {file = "i_mongodb-1.0.1.tar.gz", hash = "sha256:48fe9cb17e8a1ad1354c0a1dc3ad7310e11e578d0425bb8bdae7fbc5d49f7666"},
+    {file = "i_mongodb-2.0.1-py3-none-any.whl", hash = "sha256:2ce5a038df5838d04a4388a47800af02708fef879ae868af88e3fa9da6d255f9"},
+    {file = "i_mongodb-2.0.1.tar.gz", hash = "sha256:46430a637e16c31436a9e0805b1e291ae5dcfcb8612cc4670d76a7ffca0b14c9"},
 ]
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},

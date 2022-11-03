@@ -12,7 +12,7 @@ packages = [{include = "aracnid_config"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 aracnid-logger = "^1.0"
-i-mongodb = "^1.0"
+i-mongodb = "^2.0"
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^2.15"
