@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aracnid-config"
-version = "1.0.0"
+version = "1.1.0"
 description = "Custom configuration class that uses MongoDB as the backend database"
 authors = ["Jason Romano <aracnid@gmail.com>"]
 license = "MIT"
